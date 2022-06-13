@@ -81,6 +81,7 @@ executables:
     - benjibot
     - tablebot
     - data-default
+    - text
     
 
 tests:

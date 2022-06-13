@@ -43,7 +43,7 @@ packages:
 # extra-deps: []
 extra-deps:
   - git: https://github.com/L0neGamer/tablebot.git
-    commit: 45eb64e459cba3802c514c2194f8a98253963a1e
+    commit: 65fee8a9d5b726e2efbeac4b567995102a6069c5
   - discord-haskell-1.10.0
   - emoji-0.1.0.2
   - load-env-0.2.1.0
