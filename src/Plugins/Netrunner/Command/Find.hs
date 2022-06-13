@@ -1,5 +1,5 @@
 -- |
--- Module      : Sahasrara.Plugins.Netrunner.Command.Find
+-- Module      : Plugins.Netrunner.Command.Find
 -- Description : A command that flips a coin, or randomly selects from a list.
 -- License     : MIT
 -- Maintainer  : github.com/distributive
@@ -7,28 +7,28 @@
 -- Portability : POSIX
 --
 -- Commands for getting Netrunner cards.
-module Sahasrara.Plugins.Netrunner.Command.Find (nrInline, nrInlineImg, nrInlineFlavour, nrInlineBanHistory) where
+module Plugins.Netrunner.Command.Find (nrInline, nrInlineImg, nrInlineFlavour, nrInlineBanHistory) where
 
 import Control.Monad.Trans.Reader (ask)
 import Data.List (find)
 import Data.Maybe (fromMaybe)
 import Data.Text (Text, pack, strip, unpack)
 import Discord.Types
-import Sahasrara.Internal.Handler.Command ()
-import Sahasrara.Plugins.Netrunner.Type.Card (Card (packCode, title))
-import Sahasrara.Plugins.Netrunner.Type.Cycle (Cycle)
-import qualified Sahasrara.Plugins.Netrunner.Type.Cycle as C
-import Sahasrara.Plugins.Netrunner.Type.NrApi (NrApi (..))
-import Sahasrara.Plugins.Netrunner.Type.Pack (Pack)
-import qualified Sahasrara.Plugins.Netrunner.Type.Pack as P
-import Sahasrara.Plugins.Netrunner.Utility.Find
-import Sahasrara.Plugins.Netrunner.Utility.Print (embedBanHistory, embedCard, embedCardFlavour, embedCardImg)
-import Sahasrara.Utility
-import Sahasrara.Utility.Discord (sendEmbedMessage)
-import Sahasrara.Utility.Exception (BotException (GenericException), embedError)
-import Sahasrara.Utility.Parser (inlineCommandHelper, integer, skipSpace)
-import Sahasrara.Utility.Search (FuzzyCosts (..), closestValueWithCosts)
-import Sahasrara.Utility.Types ()
+import Tablebot.Internal.Handler.Command ()
+import Plugins.Netrunner.Type.Card (Card (packCode, title))
+import Plugins.Netrunner.Type.Cycle (Cycle)
+import qualified Plugins.Netrunner.Type.Cycle as C
+import Plugins.Netrunner.Type.NrApi (NrApi (..))
+import Plugins.Netrunner.Type.Pack (Pack)
+import qualified Plugins.Netrunner.Type.Pack as P
+import Plugins.Netrunner.Utility.Find
+import Plugins.Netrunner.Utility.Print (embedBanHistory, embedCard, embedCardFlavour, embedCardImg)
+import Tablebot.Utility
+import Tablebot.Utility.Discord (sendEmbedMessage)
+import Tablebot.Utility.Exception (BotException (GenericException), embedError)
+import Tablebot.Utility.Parser (inlineCommandHelper, integer, skipSpace)
+import Tablebot.Utility.Search (FuzzyCosts (..), closestValueWithCosts)
+import Tablebot.Utility.Types ()
 import Text.Megaparsec (anySingleBut, single, some, try, (<|>))
 
 -- | @nrInline@ searches for cards by name.

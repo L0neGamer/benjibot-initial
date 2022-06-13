@@ -1,5 +1,5 @@
 -- |
--- Module      : Sahasrara.Plugins.Netrunner.Plugin
+-- Module      : Plugins.Netrunner.Plugin
 -- Description : A plugin for finding Netrunner cards from Discord.
 -- License     : MIT
 -- Maintainer  : github.com/distributive
@@ -7,12 +7,12 @@
 -- Portability : POSIX
 --
 -- Commands for interfacing with NetrunnerDB.
-module Sahasrara.Plugins.Netrunner.Command.Help (helpPageRoots) where
+module Plugins.Netrunner.Command.Help (helpPageRoots) where
 
 import Data.Map (keys)
 import Data.Text (Text, intercalate, pack)
-import Sahasrara.Plugins.Netrunner.Utility.Search (shorthands)
-import Sahasrara.Utility
+import Plugins.Netrunner.Utility.Search (shorthands)
+import Tablebot.Utility
 import Text.RawString.QQ (r)
 
 -- | @helpPageRoots@ encapsulates the help page forest for all Netrunner commands.

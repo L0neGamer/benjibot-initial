@@ -1,5 +1,5 @@
 -- |
--- Module      : Sahasrara.Plugins.Netrunner.Type.Card
+-- Module      : Plugins.Netrunner.Type.Card
 -- Description : Handles the internal functionality of the Netrunner command.
 -- License     : MIT
 -- Maintainer  : github.com/distributive
@@ -7,7 +7,7 @@
 -- Portability : POSIX
 --
 -- The Card and Cards types.
-module Sahasrara.Plugins.Netrunner.Type.Card where
+module Plugins.Netrunner.Type.Card where
 
 import Data.Aeson (FromJSON, parseJSON, withObject, (.:?))
 import Data.Text (Text)

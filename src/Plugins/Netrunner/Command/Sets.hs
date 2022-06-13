@@ -1,7 +1,7 @@
 {-# LANGUAGE DuplicateRecordFields #-}
 
 -- |
--- Module      : Sahasrara.Plugins.Netrunner.Netrunner
+-- Module      : Plugins.Netrunner.Netrunner
 -- Description : Handles the internal functionality of the Netrunner command.
 -- License     : MIT
 -- Maintainer  : github.com/distributive
@@ -9,17 +9,17 @@
 -- Portability : POSIX
 --
 -- Backend for commands displaying card sets.
-module Sahasrara.Plugins.Netrunner.Command.Sets (nrSets, nrCycles) where
+module Plugins.Netrunner.Command.Sets (nrSets, nrCycles) where
 
 import Control.Monad.Trans.Reader (ask)
 import Data.Text (Text, unpack)
 import Discord.Types
-import Sahasrara.Plugins.Netrunner.Type.Cycle (Cycle (code, name, rotated))
-import Sahasrara.Plugins.Netrunner.Type.NrApi (NrApi (..))
-import Sahasrara.Plugins.Netrunner.Utility.Print (embedCardSets, embedCycles, embedSets, embedSetsOn)
-import Sahasrara.Utility hiding (name)
-import Sahasrara.Utility.Search (closestValue)
-import Sahasrara.Utility.SmartParser (PComm (parseComm), RestOfInput (ROI))
+import Plugins.Netrunner.Type.Cycle (Cycle (code, name, rotated))
+import Plugins.Netrunner.Type.NrApi (NrApi (..))
+import Plugins.Netrunner.Utility.Print (embedCardSets, embedCycles, embedSets, embedSetsOn)
+import Tablebot.Utility hiding (name)
+import Tablebot.Utility.Search (closestValue)
+import Tablebot.Utility.SmartParser (PComm (parseComm), RestOfInput (ROI))
 
 -- | @nrSets@ is a command that lists all packs a card was printed in.
 nrSets :: EnvCommand NrApi

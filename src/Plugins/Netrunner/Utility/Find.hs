@@ -1,7 +1,7 @@
 {-# LANGUAGE DuplicateRecordFields #-}
 
 -- |
--- Module      : Sahasrara.Plugins.Netrunner.Netrunner
+-- Module      : Plugins.Netrunner.Netrunner
 -- Description : Handles the internal functionality of the Netrunner command.
 -- License     : MIT
 -- Maintainer  : github.com/distributive
@@ -9,15 +9,15 @@
 -- Portability : POSIX
 --
 -- Functions for finding cards in the api.
-module Sahasrara.Plugins.Netrunner.Utility.Find (queryCard, queryPrintings) where
+module Plugins.Netrunner.Utility.Find (queryCard, queryPrintings) where
 
 import Data.Maybe (fromMaybe)
 import Data.Text (Text, isInfixOf, unpack)
-import Sahasrara.Plugins.Netrunner.Type.Card as Card (Card (..))
-import Sahasrara.Plugins.Netrunner.Type.NrApi (NrApi (..))
-import Sahasrara.Plugins.Netrunner.Utility.Alias (fromAlias)
-import Sahasrara.Utility.Search (FuzzyCosts (..), closestValueWithCosts)
-import Sahasrara.Utility.Utils (standardise)
+import Plugins.Netrunner.Type.Card as Card (Card (..))
+import Plugins.Netrunner.Type.NrApi (NrApi (..))
+import Plugins.Netrunner.Utility.Alias (fromAlias)
+import Tablebot.Utility.Search (FuzzyCosts (..), closestValueWithCosts)
+import Tablebot.Utility.Utils (standardise)
 
 -- | @queryCard@ searches the given library of cards by title, first checking if
 -- the search query is a substring of any cards (prioritising cards it matches

@@ -1,5 +1,5 @@
 -- |
--- Module      : Sahasrara.Plugins.Netrunner.Cycle
+-- Module      : Plugins.Netrunner.Cycle
 -- Description : Handles the internal functionality of the Netrunner command.
 -- License     : MIT
 -- Maintainer  : github.com/distributive
@@ -7,17 +7,17 @@
 -- Portability : POSIX
 --
 -- Handles the representation of Netrunner ban lists in Sahasrara.
-module Sahasrara.Plugins.Netrunner.Utility.BanList where
+module Plugins.Netrunner.Utility.BanList where
 
 import Data.List (nubBy)
 import Data.Map (keys, lookup)
 import Data.Maybe (fromMaybe, mapMaybe)
 import Data.Text (Text, intercalate, isInfixOf, toLower)
 import qualified Data.Text as T
-import Sahasrara.Plugins.Netrunner.Type.BanList
-import Sahasrara.Plugins.Netrunner.Type.Card (Card, keywords, sideCode, title)
-import qualified Sahasrara.Plugins.Netrunner.Type.Card as Card
-import Sahasrara.Plugins.Netrunner.Type.NrApi (NrApi (NrApi, banLists, cards))
+import Plugins.Netrunner.Type.BanList
+import Plugins.Netrunner.Type.Card (Card, keywords, sideCode, title)
+import qualified Plugins.Netrunner.Type.Card as Card
+import Plugins.Netrunner.Type.NrApi (NrApi (NrApi, banLists, cards))
 import Prelude hiding (lookup)
 
 -- | @latestBanList@ gets the latest banlist stored in the api.

@@ -1,5 +1,5 @@
 -- |
--- Module      : Sahasrara.Plugins.Netrunner
+-- Module      : Plugins.Netrunner
 -- Description : A plugin for finding Netrunner cards from Discord.
 -- License     : MIT
 -- Maintainer  : github.com/distributive
@@ -7,6 +7,6 @@
 -- Portability : POSIX
 --
 -- Commands for interfacing with NetrunnerDB.
-module Sahasrara.Plugins.Netrunner (netrunnerPlugin) where
+module Plugins.Netrunner (netrunnerPlugin) where
 
-import Sahasrara.Plugins.Netrunner.Plugin (netrunnerPlugin)
+import Plugins.Netrunner.Plugin (netrunnerPlugin)

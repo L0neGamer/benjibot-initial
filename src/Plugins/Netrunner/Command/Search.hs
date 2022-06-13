@@ -1,5 +1,5 @@
 -- |
--- Module      : Sahasrara.Plugins.Netrunner.Command.Search
+-- Module      : Plugins.Netrunner.Command.Search
 -- Description : Handles the internal functionality of the Netrunner command.
 -- License     : MIT
 -- Maintainer  : github.com/distributive
@@ -7,7 +7,7 @@
 -- Portability : POSIX
 --
 -- Backend for commands that search the card database.
-module Sahasrara.Plugins.Netrunner.Command.Search (nrSearch, nrRandom) where
+module Plugins.Netrunner.Command.Search (nrSearch, nrRandom) where
 
 import Control.Monad.IO.Class
 import Control.Monad.Trans.Reader (ask)
@@ -15,16 +15,16 @@ import Data.Char (isSpace)
 import Data.Map (lookup)
 import Data.Text (pack)
 import Discord.Types
-import Sahasrara.Internal.Handler.Command ()
-import Sahasrara.Plugins.Netrunner.Type.Card as Card
-import Sahasrara.Plugins.Netrunner.Type.NrApi (NrApi (..))
-import Sahasrara.Plugins.Netrunner.Utility.Print
-import Sahasrara.Plugins.Netrunner.Utility.Search
-import Sahasrara.Utility
-import Sahasrara.Utility.Discord (sendMessage)
-import Sahasrara.Utility.Parser
-import Sahasrara.Utility.Random (chooseOne)
-import Sahasrara.Utility.Types ()
+import Tablebot.Internal.Handler.Command ()
+import Plugins.Netrunner.Type.Card as Card
+import Plugins.Netrunner.Type.NrApi (NrApi (..))
+import Plugins.Netrunner.Utility.Print
+import Plugins.Netrunner.Utility.Search
+import Tablebot.Utility
+import Tablebot.Utility.Discord (sendMessage)
+import Tablebot.Utility.Parser
+import Tablebot.Utility.Random (chooseOne)
+import Tablebot.Utility.Types ()
 import Text.Megaparsec
 import Prelude hiding (lookup, unwords)
 

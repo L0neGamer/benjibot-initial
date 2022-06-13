@@ -1,7 +1,7 @@
 {-# LANGUAGE DuplicateRecordFields #-}
 
 -- |
--- Module      : Sahasrara.Plugins.Netrunner.Netrunner
+-- Module      : Plugins.Netrunner.Netrunner
 -- Description : Handles the internal functionality of the Netrunner command.
 -- License     : MIT
 -- Maintainer  : github.com/distributive
@@ -9,7 +9,7 @@
 -- Portability : POSIX
 --
 -- The backend functionality of the Netrunner commands.
-module Sahasrara.Plugins.Netrunner.Utility.Embed
+module Plugins.Netrunner.Utility.Embed
   ( cardToEmbed,
     cardToEmbedWithText,
     cardsToEmbed,
@@ -28,13 +28,13 @@ import Data.Maybe (fromMaybe)
 import Data.Text (Text, intercalate, pack)
 import qualified Data.Text as T (length)
 import Discord.Types
-import Sahasrara.Plugins.Netrunner.Type.Card as Card (Card (..))
-import Sahasrara.Plugins.Netrunner.Type.NrApi (NrApi (..))
-import Sahasrara.Plugins.Netrunner.Utility.Card
-import Sahasrara.Plugins.Netrunner.Utility.Faction
-import Sahasrara.Utility
-import Sahasrara.Utility.Embed (addColour)
-import Sahasrara.Utility.Types ()
+import Plugins.Netrunner.Type.Card as Card (Card (..))
+import Plugins.Netrunner.Type.NrApi (NrApi (..))
+import Plugins.Netrunner.Utility.Card
+import Plugins.Netrunner.Utility.Faction
+import Tablebot.Utility
+import Tablebot.Utility.Embed (addColour)
+import Tablebot.Utility.Types ()
 import Prelude hiding (unwords)
 
 -- | @cardToEmbed@ takes a card and generates an embed message representing it.

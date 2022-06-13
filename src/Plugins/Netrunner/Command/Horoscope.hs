@@ -1,7 +1,7 @@
 {-# LANGUAGE DuplicateRecordFields #-}
 
 -- |
--- Module      : Sahasrara.Plugins.Netrunner.Netrunner
+-- Module      : Plugins.Netrunner.Netrunner
 -- Description : Handles the internal functionality of the Netrunner command.
 -- License     : MIT
 -- Maintainer  : github.com/distributive
@@ -9,7 +9,7 @@
 -- Portability : POSIX
 --
 -- Backend for the horoscope command.
-module Sahasrara.Plugins.Netrunner.Command.Horoscope (nrHoroscope) where
+module Plugins.Netrunner.Command.Horoscope (nrHoroscope) where
 
 import Control.Monad.IO.Class
 import Control.Monad.Trans.Reader (ask)
@@ -19,17 +19,17 @@ import Data.Text.ICU.Replace (replaceAll)
 import Data.Time.Calendar
 import Data.Time.Clock
 import Discord.Types
-import Sahasrara.Internal.Handler.Command ()
-import Sahasrara.Plugins.Netrunner.Type.Blacklist (Blacklist (..))
-import Sahasrara.Plugins.Netrunner.Type.Card (Card (flavour, title))
-import Sahasrara.Plugins.Netrunner.Type.NrApi (NrApi (..))
-import Sahasrara.Plugins.Netrunner.Utility.Embed
-import Sahasrara.Plugins.Netrunner.Utility.Format (formatText)
-import Sahasrara.Utility
-import Sahasrara.Utility.Discord (sendEmbedMessage)
-import Sahasrara.Utility.Embed (addColour)
-import Sahasrara.Utility.Random (chooseOneSeeded)
-import Sahasrara.Utility.Types ()
+import Tablebot.Internal.Handler.Command ()
+import Plugins.Netrunner.Type.Blacklist (Blacklist (..))
+import Plugins.Netrunner.Type.Card (Card (flavour, title))
+import Plugins.Netrunner.Type.NrApi (NrApi (..))
+import Plugins.Netrunner.Utility.Embed
+import Plugins.Netrunner.Utility.Format (formatText)
+import Tablebot.Utility
+import Tablebot.Utility.Discord (sendEmbedMessage)
+import Tablebot.Utility.Embed (addColour)
+import Tablebot.Utility.Random (chooseOneSeeded)
+import Tablebot.Utility.Types ()
 import Text.RawString.QQ (r)
 
 -- | @nrHoroscope@ gets a random piece of flavour text from the card pool,

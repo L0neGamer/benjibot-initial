@@ -1,5 +1,5 @@
 -- |
--- Module     " = "Sahasrara.Plugins.Netrunner.Alias
+-- Module     " = "Plugins.Netrunner.Alias
 -- Description" = "Hardcodes some card title aliases.
 -- License    " = "MIT
 -- Maintainer " = "github.com/distributive
@@ -7,7 +7,7 @@
 -- Portability" = "POSIX
 --
 -- Hardcodes some aliases for card names.
-module Sahasrara.Plugins.Netrunner.Utility.Alias where
+module Plugins.Netrunner.Utility.Alias where
 
 import Data.Map (Map, findWithDefault)
 import Data.Text (Text)

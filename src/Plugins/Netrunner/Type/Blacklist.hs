@@ -1,5 +1,5 @@
 -- |
--- Module      : Sahasrara.Plugins.Netrunner.Type.Blacklist
+-- Module      : Plugins.Netrunner.Type.Blacklist
 -- Description : Handles the internal functionality of the Netrunner command.
 -- License     : MIT
 -- Maintainer  : github.com/distributive
@@ -7,7 +7,7 @@
 -- Portability : POSIX
 --
 -- The blacklist for filtering horoscopes.
-module Sahasrara.Plugins.Netrunner.Type.Blacklist where
+module Plugins.Netrunner.Type.Blacklist where
 
 import Data.Aeson (FromJSON)
 import Data.Text (Text)

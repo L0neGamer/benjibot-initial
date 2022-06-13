@@ -1,5 +1,5 @@
 -- |
--- Module      : Sahasrara.Plugins.Netrunner.Utility.Search
+-- Module      : Plugins.Netrunner.Utility.Search
 -- Description : Handles the internal functionality of the Netrunner command.
 -- License     : MIT
 -- Maintainer  : github.com/distributive
@@ -7,7 +7,7 @@
 -- Portability : POSIX
 --
 -- Converts plaintext to Netrunner search queries and vice versa.
-module Sahasrara.Plugins.Netrunner.Utility.Search
+module Plugins.Netrunner.Utility.Search
   ( Query,
     QueryComp,
     searchCards,
@@ -23,17 +23,17 @@ import Data.Map (Map, fromList)
 import Data.Maybe (fromMaybe, mapMaybe)
 import Data.Text (Text, intercalate, isInfixOf, pack, replace, toLower, unpack, unwords)
 import Data.Text.Read (decimal)
-import Sahasrara.Plugins.Netrunner.Type.BanList (BanList)
-import qualified Sahasrara.Plugins.Netrunner.Type.BanList as BanList
-import Sahasrara.Plugins.Netrunner.Type.Card as Card
-import qualified Sahasrara.Plugins.Netrunner.Type.Cycle as Cycle
-import qualified Sahasrara.Plugins.Netrunner.Type.Faction as Faction
-import Sahasrara.Plugins.Netrunner.Type.NrApi (NrApi (..))
-import qualified Sahasrara.Plugins.Netrunner.Type.Type as Type
-import Sahasrara.Plugins.Netrunner.Utility.BanList (activeBanList, isBanned, latestBanList)
-import Sahasrara.Plugins.Netrunner.Utility.Card (toCycle)
-import Sahasrara.Utility.Search (autocomplete, closestMatch, closestPair, closestValue)
-import Sahasrara.Utility.Utils (standardise)
+import Plugins.Netrunner.Type.BanList (BanList)
+import qualified Plugins.Netrunner.Type.BanList as BanList
+import Plugins.Netrunner.Type.Card as Card
+import qualified Plugins.Netrunner.Type.Cycle as Cycle
+import qualified Plugins.Netrunner.Type.Faction as Faction
+import Plugins.Netrunner.Type.NrApi (NrApi (..))
+import qualified Plugins.Netrunner.Type.Type as Type
+import Plugins.Netrunner.Utility.BanList (activeBanList, isBanned, latestBanList)
+import Plugins.Netrunner.Utility.Card (toCycle)
+import Tablebot.Utility.Search (autocomplete, closestMatch, closestPair, closestValue)
+import Tablebot.Utility.Utils (standardise)
 import Text.Read (readMaybe)
 import Prelude hiding (unwords)
 

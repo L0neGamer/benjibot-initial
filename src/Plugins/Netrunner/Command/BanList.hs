@@ -1,7 +1,7 @@
 {-# LANGUAGE DuplicateRecordFields #-}
 
 -- |
--- Module      : Sahasrara.Plugins.Netrunner.Netrunner
+-- Module      : Plugins.Netrunner.Netrunner
 -- Description : Handles the internal functionality of the Netrunner command.
 -- License     : MIT
 -- Maintainer  : github.com/distributive
@@ -9,18 +9,18 @@
 -- Portability : POSIX
 --
 -- Backend for the banHistory and banList commands.
-module Sahasrara.Plugins.Netrunner.Command.BanList (nrBanList) where
+module Plugins.Netrunner.Command.BanList (nrBanList) where
 
 import Control.Monad.Trans.Reader (ask)
 import Data.Text (Text, toLower, unpack)
 import Discord.Types
-import Sahasrara.Plugins.Netrunner.Type.BanList (BanList (name))
-import Sahasrara.Plugins.Netrunner.Type.NrApi (NrApi (..))
-import Sahasrara.Plugins.Netrunner.Utility.BanList
-import Sahasrara.Plugins.Netrunner.Utility.Print (embedBanList, embedBanLists)
-import Sahasrara.Utility hiding (name)
-import Sahasrara.Utility.Search (FuzzyCosts (..), closestValueWithCosts)
-import Sahasrara.Utility.SmartParser (PComm (parseComm), RestOfInput (ROI))
+import Plugins.Netrunner.Type.BanList (BanList (name))
+import Plugins.Netrunner.Type.NrApi (NrApi (..))
+import Plugins.Netrunner.Utility.BanList
+import Plugins.Netrunner.Utility.Print (embedBanList, embedBanLists)
+import Tablebot.Utility hiding (name)
+import Tablebot.Utility.Search (FuzzyCosts (..), closestValueWithCosts)
+import Tablebot.Utility.SmartParser (PComm (parseComm), RestOfInput (ROI))
 
 -- | @nrBanList@ is a command listing all cards affected by a banlist.
 nrBanList :: EnvCommand NrApi

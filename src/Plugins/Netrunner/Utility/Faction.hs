@@ -1,5 +1,5 @@
 -- |
--- Module      : Sahasrara.Plugins.Netrunner.Faction
+-- Module      : Plugins.Netrunner.Faction
 -- Description : Handles the internal functionality of the Netrunner command.
 -- License     : MIT
 -- Maintainer  : github.com/distributive
@@ -7,14 +7,14 @@
 -- Portability : POSIX
 --
 -- Handles the representation of Netrunner factions in Sahasrara.
-module Sahasrara.Plugins.Netrunner.Utility.Faction where
+module Plugins.Netrunner.Utility.Faction where
 
 import Data.Text
-import Sahasrara.Plugins.Netrunner.Type.Faction (Faction (..))
-import Sahasrara.Plugins.Netrunner.Type.NrApi (NrApi)
-import Sahasrara.Utility
-import Sahasrara.Utility.Discord (formatFromEmojiName)
-import Sahasrara.Utility.Types ()
+import Plugins.Netrunner.Type.Faction (Faction (..))
+import Plugins.Netrunner.Type.NrApi (NrApi)
+import Tablebot.Utility
+import Tablebot.Utility.Discord (formatFromEmojiName)
+import Tablebot.Utility.Types ()
 
 -- | @toEmoji@ takes a faction and attempts to find its Discord emoji.
 toEmoji :: Faction -> EnvDatabaseDiscord NrApi Text

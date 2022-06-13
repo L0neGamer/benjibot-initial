@@ -24,8 +24,50 @@ dependencies:
 
 library:
   source-dirs: src
+  ghc-options:
+  - -Wall
   dependencies:
   - tablebot
+  - text
+  - containers
+  - aeson
+  - discord-haskell
+  - split
+  - mtl
+  - time
+  - transformers
+  - raw-strings-qq
+  - text-icu
+  - text-regex-replace
+  - http-conduit
+  - yaml
+  - megaparsec
+  default-extensions:
+      OverloadedStrings
+      LambdaCase
+      EmptyDataDecls
+      FlexibleContexts
+      GADTs
+      GeneralizedNewtypeDeriving
+      MultiParamTypeClasses
+      QuasiQuotes
+      TemplateHaskell
+      TypeFamilies
+      DerivingStrategies
+      StandaloneDeriving
+      UndecidableInstances
+      DataKinds
+      FlexibleInstances
+      DeriveGeneric
+      TypeApplications
+      MultiWayIf
+      TupleSections
+      ConstraintKinds
+      RecordWildCards
+      ScopedTypeVariables
+      TypeOperators
+      RankNTypes
+      BangPatterns
 
 executables:
   benjibot-exe:
@@ -37,6 +79,9 @@ executables:
     - -with-rtsopts=-N
     dependencies:
     - benjibot
+    - tablebot
+    - data-default
+    
 
 tests:
   benjibot-test:

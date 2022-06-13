@@ -1,5 +1,5 @@
 -- |
--- Module      : Sahasrara.Plugins.Netrunner.Card
+-- Module      : Plugins.Netrunner.Card
 -- Description : Handles the internal functionality of the Netrunner command.
 -- License     : MIT
 -- Maintainer  : github.com/distributive
@@ -7,7 +7,7 @@
 -- Portability : POSIX
 --
 -- Handles the representation of Netrunner cards in Sahasrara.
-module Sahasrara.Plugins.Netrunner.Utility.Card
+module Plugins.Netrunner.Utility.Card
   ( toTitle,
     toText,
     toLink,
@@ -26,18 +26,18 @@ import Data.Maybe (fromMaybe)
 import Data.Text (Text, pack, replace, unpack)
 import qualified Data.Text (toTitle)
 import Discord.Types
-import Sahasrara.Plugins.Netrunner.Type.Card (Card (..))
-import Sahasrara.Plugins.Netrunner.Type.Cycle (Cycle)
-import qualified Sahasrara.Plugins.Netrunner.Type.Cycle as Cycle
-import Sahasrara.Plugins.Netrunner.Type.Faction (Faction)
-import qualified Sahasrara.Plugins.Netrunner.Type.Faction as Faction
-import Sahasrara.Plugins.Netrunner.Type.NrApi (NrApi (..))
-import Sahasrara.Plugins.Netrunner.Type.Pack (Pack (cycleCode))
-import qualified Sahasrara.Plugins.Netrunner.Type.Pack as Pack
-import Sahasrara.Plugins.Netrunner.Utility.BanList (activeBanList, isBanned, isRestricted, toGlobalPenalty, toUniversalInfluence)
-import Sahasrara.Plugins.Netrunner.Utility.Format (formatText)
-import Sahasrara.Utility
-import Sahasrara.Utility.Types ()
+import Plugins.Netrunner.Type.Card (Card (..))
+import Plugins.Netrunner.Type.Cycle (Cycle)
+import qualified Plugins.Netrunner.Type.Cycle as Cycle
+import Plugins.Netrunner.Type.Faction (Faction)
+import qualified Plugins.Netrunner.Type.Faction as Faction
+import Plugins.Netrunner.Type.NrApi (NrApi (..))
+import Plugins.Netrunner.Type.Pack (Pack (cycleCode))
+import qualified Plugins.Netrunner.Type.Pack as Pack
+import Plugins.Netrunner.Utility.BanList (activeBanList, isBanned, isRestricted, toGlobalPenalty, toUniversalInfluence)
+import Plugins.Netrunner.Utility.Format (formatText)
+import Tablebot.Utility
+import Tablebot.Utility.Types ()
 
 -- | @toLink@ takes a card and generates a link to its NetrunnerDB page.
 toLink :: Card -> Text

@@ -1,5 +1,5 @@
 -- |
--- Module      : Sahasrara.Plugins.Netrunner.Type.Pack
+-- Module      : Plugins.Netrunner.Type.Pack
 -- Description : Handles the internal functionality of the Netrunner command.
 -- License     : MIT
 -- Maintainer  : github.com/distributive
@@ -7,7 +7,7 @@
 -- Portability : POSIX
 --
 -- The Pack and Packs types.
-module Sahasrara.Plugins.Netrunner.Type.Pack where
+module Plugins.Netrunner.Type.Pack where
 
 import Data.Aeson (FromJSON, parseJSON, withObject, (.:))
 import Data.Text (Text)

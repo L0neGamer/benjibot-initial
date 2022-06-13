@@ -1,5 +1,5 @@
 -- |
--- Module      : Sahasrara.Plugins.Netrunner.NrApi
+-- Module      : Plugins.Netrunner.NrApi
 -- Description : Handles the internal functionality of the Netrunner command.
 -- License     : MIT
 -- Maintainer  : github.com/distributive
@@ -7,7 +7,7 @@
 -- Portability : POSIX
 --
 -- Handles the representation of all Netrunner data in Sahasrara.
-module Sahasrara.Plugins.Netrunner.Utility.NrApi (getNrApi) where
+module Plugins.Netrunner.Utility.NrApi (getNrApi) where
 
 import Data.Aeson (FromJSON, Value (Object), eitherDecode, parseJSON, (.:))
 import Data.Either (fromRight)
@@ -18,15 +18,15 @@ import Data.Yaml.Internal (ParseException)
 import GHC.Generics (Generic)
 import Network.HTTP.Conduit (Response (responseBody), parseRequest)
 import Network.HTTP.Simple (httpLBS)
-import Sahasrara.Plugins.Netrunner.Type.BanList (BanList)
-import Sahasrara.Plugins.Netrunner.Type.Blacklist (Blacklist, defaultBlacklist)
-import Sahasrara.Plugins.Netrunner.Type.Card (Card, packCode)
-import Sahasrara.Plugins.Netrunner.Type.Cycle (Cycle)
-import Sahasrara.Plugins.Netrunner.Type.Faction (Faction)
-import Sahasrara.Plugins.Netrunner.Type.Glossary (Glossary, defaultGlossary)
-import Sahasrara.Plugins.Netrunner.Type.NrApi (NrApi (..))
-import Sahasrara.Plugins.Netrunner.Type.Pack (Pack)
-import Sahasrara.Plugins.Netrunner.Type.Type (Type)
+import Plugins.Netrunner.Type.BanList (BanList)
+import Plugins.Netrunner.Type.Blacklist (Blacklist, defaultBlacklist)
+import Plugins.Netrunner.Type.Card (Card, packCode)
+import Plugins.Netrunner.Type.Cycle (Cycle)
+import Plugins.Netrunner.Type.Faction (Faction)
+import Plugins.Netrunner.Type.Glossary (Glossary, defaultGlossary)
+import Plugins.Netrunner.Type.NrApi (NrApi (..))
+import Plugins.Netrunner.Type.Pack (Pack)
+import Plugins.Netrunner.Type.Type (Type)
 
 -- | @getNrApi@ is a function that attempts to get the JSON objects containing
 -- all required Netrunner data (cards, cycles, and packs) as provided by

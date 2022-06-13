@@ -1,5 +1,5 @@
 -- |
--- Module      : Sahasrara.Plugins.Netrunner.Command.Glossary
+-- Module      : Plugins.Netrunner.Command.Glossary
 -- Description : A command that flips a coin, or randomly selects from a list.
 -- License     : MIT
 -- Maintainer  : github.com/distributive
@@ -7,24 +7,24 @@
 -- Portability : POSIX
 --
 -- A command for dismystifying the language of Netrunner.
-module Sahasrara.Plugins.Netrunner.Command.Glossary (nrGlossary) where
+module Plugins.Netrunner.Command.Glossary (nrGlossary) where
 
 import Control.Monad.Reader (ask, liftIO)
 import Data.List (nub)
 import Data.Map (fromList, lookup)
 import Data.Maybe (catMaybes, fromMaybe)
 import Data.Text (Text, intercalate, unpack)
-import Sahasrara.Plugins.Netrunner.Type.Card (title)
-import Sahasrara.Plugins.Netrunner.Type.Glossary (Definition (..), Glossary (..))
-import Sahasrara.Plugins.Netrunner.Type.NrApi
-import Sahasrara.Plugins.Netrunner.Utility.Alias (fromAlias)
-import Sahasrara.Plugins.Netrunner.Utility.Format (formatText')
-import Sahasrara.Utility hiding (name)
-import Sahasrara.Utility.Discord (Message, sendEmbedMessage)
-import Sahasrara.Utility.Embed (addColour, basicEmbed)
-import Sahasrara.Utility.Random (chooseOne)
-import Sahasrara.Utility.Search (FuzzyCosts (..), sortValuesWithCosts)
-import Sahasrara.Utility.SmartParser (PComm (parseComm), RestOfInput (ROI))
+import Plugins.Netrunner.Type.Card (title)
+import Plugins.Netrunner.Type.Glossary (Definition (..), Glossary (..))
+import Plugins.Netrunner.Type.NrApi
+import Plugins.Netrunner.Utility.Alias (fromAlias)
+import Plugins.Netrunner.Utility.Format (formatText')
+import Tablebot.Utility hiding (name)
+import Tablebot.Utility.Discord (Message, sendEmbedMessage)
+import Tablebot.Utility.Embed (addColour, basicEmbed)
+import Tablebot.Utility.Random (chooseOne)
+import Tablebot.Utility.Search (FuzzyCosts (..), sortValuesWithCosts)
+import Tablebot.Utility.SmartParser (PComm (parseComm), RestOfInput (ROI))
 import Prelude hiding (lookup)
 
 -- | @glossary@ looks up a given term, or shows the full list if none are

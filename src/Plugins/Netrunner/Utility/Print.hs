@@ -1,7 +1,7 @@
 {-# LANGUAGE DuplicateRecordFields #-}
 
 -- |
--- Module      : Sahasrara.Plugins.Netrunner.Print
+-- Module      : Plugins.Netrunner.Print
 -- Description : Handles the internal functionality of the Netrunner command.
 -- License     : MIT
 -- Maintainer  : github.com/distributive
@@ -9,7 +9,7 @@
 -- Portability : POSIX
 --
 -- The backend functionality of the Netrunner commands.
-module Sahasrara.Plugins.Netrunner.Utility.Print
+module Plugins.Netrunner.Utility.Print
   ( embedCard,
     embedCards,
     embedCardImg,
@@ -28,23 +28,23 @@ import Control.Monad.Trans.Reader (ask)
 import Data.Maybe (fromMaybe, mapMaybe)
 import Data.Text (Text, intercalate)
 import Discord.Types
-import Sahasrara.Internal.Handler.Command ()
-import Sahasrara.Plugins.Netrunner.Type.BanList (BanList (active), CardBan (..))
-import qualified Sahasrara.Plugins.Netrunner.Type.BanList as BanList
-import Sahasrara.Plugins.Netrunner.Type.Card (Card (code, text))
-import Sahasrara.Plugins.Netrunner.Type.Cycle (Cycle)
-import qualified Sahasrara.Plugins.Netrunner.Type.Cycle as C
-import Sahasrara.Plugins.Netrunner.Type.NrApi (NrApi (..))
-import qualified Sahasrara.Plugins.Netrunner.Type.Pack as P
-import Sahasrara.Plugins.Netrunner.Utility.BanList (activeBanList, latestBanListActive, listAffectedCards, listBanHistory, listBanLists, toMwlStatus)
-import Sahasrara.Plugins.Netrunner.Utility.Card (toPack)
-import Sahasrara.Plugins.Netrunner.Utility.Embed
-import Sahasrara.Plugins.Netrunner.Utility.Find
-import Sahasrara.Plugins.Netrunner.Utility.Format (formatText)
-import Sahasrara.Utility
-import Sahasrara.Utility.Discord (formatFromEmojiName, sendEmbedMessage)
-import Sahasrara.Utility.Embed (addColour)
-import Sahasrara.Utility.Types ()
+import Tablebot.Internal.Handler.Command ()
+import Plugins.Netrunner.Type.BanList (BanList (active), CardBan (..))
+import qualified Plugins.Netrunner.Type.BanList as BanList
+import Plugins.Netrunner.Type.Card (Card (code, text))
+import Plugins.Netrunner.Type.Cycle (Cycle)
+import qualified Plugins.Netrunner.Type.Cycle as C
+import Plugins.Netrunner.Type.NrApi (NrApi (..))
+import qualified Plugins.Netrunner.Type.Pack as P
+import Plugins.Netrunner.Utility.BanList (activeBanList, latestBanListActive, listAffectedCards, listBanHistory, listBanLists, toMwlStatus)
+import Plugins.Netrunner.Utility.Card (toPack)
+import Plugins.Netrunner.Utility.Embed
+import Plugins.Netrunner.Utility.Find
+import Plugins.Netrunner.Utility.Format (formatText)
+import Tablebot.Utility
+import Tablebot.Utility.Discord (formatFromEmojiName, sendEmbedMessage)
+import Tablebot.Utility.Embed (addColour)
+import Tablebot.Utility.Types ()
 
 -- | @embedCard@ takes a card and embeds it in a message.
 embedCard :: Card -> Message -> EnvDatabaseDiscord NrApi ()

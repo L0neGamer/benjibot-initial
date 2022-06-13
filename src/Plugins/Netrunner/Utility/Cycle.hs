@@ -1,5 +1,5 @@
 -- |
--- Module      : Sahasrara.Plugins.Netrunner.Cycle
+-- Module      : Plugins.Netrunner.Cycle
 -- Description : Handles the internal functionality of the Netrunner command.
 -- License     : MIT
 -- Maintainer  : github.com/distributive
@@ -7,4 +7,4 @@
 -- Portability : POSIX
 --
 -- Handles the representation of Netrunner cycles in Sahasrara.
-module Sahasrara.Plugins.Netrunner.Utility.Cycle where
+module Plugins.Netrunner.Utility.Cycle where

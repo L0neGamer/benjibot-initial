@@ -1,5 +1,5 @@
 -- |
--- Module      : Sahasrara.Plugins.Netrunner.Plugin
+-- Module      : Plugins.Netrunner.Plugin
 -- Description : A plugin for finding Netrunner cards from Discord.
 -- License     : MIT
 -- Maintainer  : github.com/distributive
@@ -7,13 +7,13 @@
 -- Portability : POSIX
 --
 -- General purpose Netrunner functions.
-module Sahasrara.Plugins.Netrunner.Utility.Format where
+module Plugins.Netrunner.Utility.Format where
 
 import Data.Text (Text, replace)
-import Sahasrara.Plugins.Netrunner.Type.NrApi (NrApi)
-import Sahasrara.Utility
-import Sahasrara.Utility.Discord (formatFromEmojiName)
-import Sahasrara.Utility.Types ()
+import Plugins.Netrunner.Type.NrApi (NrApi)
+import Tablebot.Utility
+import Tablebot.Utility.Discord (formatFromEmojiName)
+import Tablebot.Utility.Types ()
 
 -- | @formatNr@ replaces the Netrunner symbols in a given text with Discord
 -- emoji.

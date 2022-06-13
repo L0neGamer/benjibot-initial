@@ -1,10 +1,12 @@
 module Main where
 
-import Lib
-import Tablebot.Internal.Types
 import Data.Default
-import Tablebot.Plugins.Ping
+import Lib
 import Plugins.Netrunner
+import Tablebot
+import Tablebot.Internal.Plugins
+import Tablebot.Internal.Types
+import Tablebot.Plugins.Ping
 
 main :: IO ()
-main = runTablebotWithEnv [pingPlugin, netrunnerPlugin] def
+main = runTablebotWithEnv [pingpong, compilePlugin netrunnerPlugin] def

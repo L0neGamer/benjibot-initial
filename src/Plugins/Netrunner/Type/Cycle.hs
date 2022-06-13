@@ -1,5 +1,5 @@
 -- |
--- Module      : Sahasrara.Plugins.Netrunner.Type.Cycle
+-- Module      : Plugins.Netrunner.Type.Cycle
 -- Description : Handles the internal functionality of the Netrunner command.
 -- License     : MIT
 -- Maintainer  : github.com/distributive
@@ -7,7 +7,7 @@
 -- Portability : POSIX
 --
 -- The Cycle and Cycles types.
-module Sahasrara.Plugins.Netrunner.Type.Cycle where
+module Plugins.Netrunner.Type.Cycle where
 
 import Data.Aeson (FromJSON, parseJSON, withObject, (.:))
 import Data.Text (Text)

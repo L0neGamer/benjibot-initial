@@ -1,5 +1,5 @@
 -- |
--- Module      : Sahasrara.Plugins.Netrunner.Type.Glossary
+-- Module      : Plugins.Netrunner.Type.Glossary
 -- Description : The type of the Netrunner glossary.
 -- License     : MIT
 -- Maintainer  : github.com/distributive
@@ -7,7 +7,7 @@
 -- Portability : POSIX
 --
 -- The Glossary type.
-module Sahasrara.Plugins.Netrunner.Type.Glossary where
+module Plugins.Netrunner.Type.Glossary where
 
 import Data.Aeson (FromJSON)
 import Data.Text (Text)

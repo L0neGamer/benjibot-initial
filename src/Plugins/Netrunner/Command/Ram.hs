@@ -1,7 +1,7 @@
 {-# LANGUAGE DuplicateRecordFields #-}
 
 -- |
--- Module      : Sahasrara.Plugins.Netrunner.Netrunner
+-- Module      : Plugins.Netrunner.Netrunner
 -- Description : Handles the internal functionality of the Netrunner command.
 -- License     : MIT
 -- Maintainer  : github.com/distributive
@@ -9,23 +9,23 @@
 -- Portability : POSIX
 --
 -- Backend for commands generating RAM card pools.
-module Sahasrara.Plugins.Netrunner.Command.Ram (nrRam) where
+module Plugins.Netrunner.Command.Ram (nrRam) where
 
 import Control.Monad.Reader (ask, liftIO)
 import Data.Text (Text, intercalate)
 import Discord.Types
-import qualified Sahasrara.Plugins.Netrunner.Type.Cycle as C
-import Sahasrara.Plugins.Netrunner.Type.NrApi (NrApi (..))
-import Sahasrara.Plugins.Netrunner.Type.Pack (Pack (cycleCode, name))
-import qualified Sahasrara.Plugins.Netrunner.Type.Pack as P
-import Sahasrara.Plugins.Netrunner.Utility.Embed (embedText)
-import Sahasrara.Utility hiding (name)
-import Sahasrara.Utility.Discord (sendEmbedMessage)
-import Sahasrara.Utility.Embed (addColour)
-import Sahasrara.Utility.Exception (BotException (GenericException), throwBot)
-import Sahasrara.Utility.Random (chooseN)
-import Sahasrara.Utility.SmartParser (NonNegativeInt (NonNegativeInt), PComm (parseComm), WithError (WErr))
-import Sahasrara.Utility.Types ()
+import qualified Plugins.Netrunner.Type.Cycle as C
+import Plugins.Netrunner.Type.NrApi (NrApi (..))
+import Plugins.Netrunner.Type.Pack (Pack (cycleCode, name))
+import qualified Plugins.Netrunner.Type.Pack as P
+import Plugins.Netrunner.Utility.Embed (embedText)
+import Tablebot.Utility hiding (name)
+import Tablebot.Utility.Discord (sendEmbedMessage)
+import Tablebot.Utility.Embed (addColour)
+import Tablebot.Utility.Exception (BotException (GenericException), throwBot)
+import Tablebot.Utility.Random (chooseN)
+import Tablebot.Utility.SmartParser (NonNegativeInt (NonNegativeInt), PComm (parseComm), WithError (WErr))
+import Tablebot.Utility.Types ()
 
 -- | @nrRam@ is a command that generates a RAM card pool.
 nrRam :: EnvCommand NrApi

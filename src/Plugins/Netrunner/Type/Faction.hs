@@ -1,5 +1,5 @@
 -- |
--- Module      : Sahasrara.Plugins.Netrunner.Type.Faction
+-- Module      : Plugins.Netrunner.Type.Faction
 -- Description : Handles the internal functionality of the Netrunner command.
 -- License     : MIT
 -- Maintainer  : github.com/distributive
@@ -7,7 +7,7 @@
 -- Portability : POSIX
 --
 -- The Faction and Factions types.
-module Sahasrara.Plugins.Netrunner.Type.Faction where
+module Plugins.Netrunner.Type.Faction where
 
 import Data.Aeson (FromJSON, parseJSON, withObject, (.:))
 import Data.Text (Text)
